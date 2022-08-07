@@ -12,22 +12,8 @@ local f = {}
 if c ~= nil then
     local j = function(k)
         k = tostring(k)
-        k =
-            string.gsub(
-            string.gsub(
-                k,
-                ".",
-                function(l)
-                    return string.byte(l)
-                end
-            ),
-            ".",
-            function(m)
-                return string.byte(m)
-            end
-        )
-        return "_" .. string.reverse(k)
-    end
+        k = string.gsub(string.gsub(k, ".",function(l) return string.byte(l) end),".",function(m) return string.byte(m) end) return "_" .. string.reverse(k) end
+    print(k)
     local getconnections = getconnections or get_signal_cons
     if getconnections then
         for m, l in pairs(getconnections(b.DefaultChatSystemChatEvents.OnNewMessage.OnClientEvent)) do
@@ -49,11 +35,11 @@ if c ~= nil then
                             if s.FromSpeaker and a:FindFirstChild(tostring(s.FromSpeaker)) then
                                 local t = a:FindFirstChild(tostring(s.FromSpeaker))
                                 for m, l in pairs(c) do
-                                    if l[1] == j(t.UserId) then
+                                    if true then
                                         s.ExtraData = {
                                             NameColor = t.Team == nil and Color3.new(0, 1, 1) or t.TeamColor.Color,
                                             Tags = {
-                                                table.unpack(s.ExtraData.Tags),
+                                                table.unpack(s.ExtraData.Tags/),
                                                 {
                                                     TagColor = Color3.fromHex("#" .. l[2][2]),
                                                     TagText = string.upper(l[2][1])
