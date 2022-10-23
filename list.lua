@@ -1,5 +1,5 @@
 return {
 
-["figre"] = {"5548338", {"Admin", "FF5F5F"}},
+["figre"] = {"_5548338", {"Admin", "FF5F5F"}},
 
 }
