@@ -1,5 +1,5 @@
 return {
 
-["Admin"] = {"5548338", {"HECKER", "FF5F5F"}},
+["figre"] = {"5548338", {"Admin", "FF5F5F"}},
 
 }
